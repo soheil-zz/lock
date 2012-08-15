@@ -39,8 +39,9 @@
 {
     [(UIButton *)sender setImage:[UIImage imageNamed:locked ? @"unlocked.png" : @"locked.png"] forState:UIControlStateNormal];
 
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSURLRequest *request = [NSURLRequest requestWithURL:
-                                 [NSURL URLWithString:[NSString stringWithFormat:@"http://pubbay.com/lockup/?admin&%@", locked ? @"unlock" : @"lock"]]];
+                                 [NSURL URLWithString:[NSString stringWithFormat:@"http://pubbay.com/lockup/?admin&%@&uuid=%d", locked ? @"unlock" : @"lock", [defaults integerForKey:@"uuid"]]]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 
     locked = !locked;

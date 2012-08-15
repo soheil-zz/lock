@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#include <stdlib.h>
 
 @implementation AppDelegate
 
@@ -23,7 +24,19 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    [self setDefaultValues];
     return YES;
+}
+
+- (void)setDefaultValues
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults boolForKey:@"ran-more-than-once"]) {
+        [defaults setInteger:arc4random() % 99999999 forKey:@"uuid"];
+        [defaults setBool:YES forKey:@"ran-more-than-once"];
+        [defaults synchronize];
+        NSLog(@"Set default values at first run.");
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
