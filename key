@@ -1,0 +1,4 @@
+osascript -e 'tell application "System Events" to keystroke "\n"'
+osascript -e 'tell application "System Events" to keystroke "229badcs690"'
+osascript -e 'tell application "System Events" to keystroke return'
+# using {command down}' 
