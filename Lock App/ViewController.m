@@ -13,11 +13,15 @@
 @end
 
 @implementation ViewController
+@synthesize label;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    label.text = [NSString stringWithFormat:@"Your secret code: %d", [defaults integerForKey:@"uuid"]];
 }
 
 - (void)viewDidUnload
@@ -28,11 +32,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+    return NO;
 }
 
 - (IBAction)lock:(id)sender
@@ -42,7 +42,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSURLRequest *request = [NSURLRequest requestWithURL:
                                  [NSURL URLWithString:[NSString stringWithFormat:@"http://pubbay.com/lockup/?admin&%@&uuid=%d", locked ? @"unlock" : @"lock", [defaults integerForKey:@"uuid"]]]];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSURLConnection *dummy = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    dummy = dummy;
 
     locked = !locked;
 }

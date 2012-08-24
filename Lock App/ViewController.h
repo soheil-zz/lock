@@ -11,6 +11,9 @@
 @interface ViewController : UIViewController
 {
     BOOL locked;
+    UILabel *label;
 }
+
+@property(nonatomic, retain)IBOutlet UILabel *label;
 
 @end
