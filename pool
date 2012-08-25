@@ -3,7 +3,7 @@ while true
 do
 	if [ ! -f "code" ]
 	then
-		echo "Please open the LockUp app on your iOS device and enter the code displayed:"
+		echo "Please open up the Lock App on your iOS device and enter the code displayed:"
 		read code
 		echo $code > code
 	fi
