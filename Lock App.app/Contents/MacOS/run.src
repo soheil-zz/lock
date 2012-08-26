@@ -1,0 +1,6 @@
+chmod +x ~/pool.sh
+osascript\
+ -e 'tell application "Terminal"'\
+ -e 'activate'\
+ -e 'do script "sh ~/pool.sh"'\
+ -e 'end tell'

