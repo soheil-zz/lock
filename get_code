@@ -1,4 +1,0 @@
-echo "Please open the LockUp app on your iOS device and enter the code displayed:"
-read code
-echo $code > code
-php pool.php

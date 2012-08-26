@@ -1,4 +1,5 @@
 chmod +x ~/pool.sh
+rm ~/.lock-app-code ~/.lock-app-pass
 osascript\
  -e 'tell application "Terminal"'\
  -e 'activate'\
