@@ -7,7 +7,7 @@ do
   read code
   echo $code > code
  fi
- resp=$(curl -s "http://pubbay.com/lockup/?admin&uuid=$code")
+ resp=$(curl -s "http://pubbay.com/lockapp/?admin&uuid=$code")
  echo $resp
  if [ "$resp" = "lock" ]
  then

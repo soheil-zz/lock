@@ -41,7 +41,7 @@
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSURLRequest *request = [NSURLRequest requestWithURL:
-                                 [NSURL URLWithString:[NSString stringWithFormat:@"http://pubbay.com/lockup/?admin&%@&uuid=%d", locked ? @"unlock" : @"lock", [defaults integerForKey:@"uuid"]]]];
+                                 [NSURL URLWithString:[NSString stringWithFormat:@"http://pubbay.com/lockapp/?admin&%@&uuid=%d", locked ? @"unlock" : @"lock", [defaults integerForKey:@"uuid"]]]];
     NSURLConnection *dummy = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     dummy = dummy;
 
