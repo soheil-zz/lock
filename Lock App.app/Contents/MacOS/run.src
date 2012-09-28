@@ -1,8 +1,0 @@
-chmod +x /usr/local/bin/lockapp*
-sudo defaults write com.apple.loginwindow LoginHook /usr/local/bin/lockapp-wrapper
-rm ~/.lock-app-code ~/.lock-app-pass
-osascript\
- -e 'tell application "Terminal"'\
- -e 'activate'\
- -e 'do script "sh /usr/local/bin/lockapp"'\
- -e 'end tell'

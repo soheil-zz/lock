@@ -1,2 +1,2 @@
 #!/bin/bash
-su - $1 -c "nohup /usr/local/bin/lockapp &"
+su - $1 -c "nohup ~/lockapp &"

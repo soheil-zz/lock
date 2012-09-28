@@ -30,6 +30,7 @@
 		5B551EE915E7670500CC7DF5 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B551ED115E7670500CC7DF5 /* ViewController_iPhone.xib */; };
 		5B551EEB15E7670500CC7DF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B551ED515E7670500CC7DF5 /* main.m */; };
 		5B551EEC15E7670500CC7DF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B551ED715E7670500CC7DF5 /* ViewController.m */; };
+		5B6599521615866500E1A6EC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6599511615866500E1A6EC /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -82,6 +83,7 @@
 		5B551ED515E7670500CC7DF5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B551ED615E7670500CC7DF5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5B551ED715E7670500CC7DF5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B6599511615866500E1A6EC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		5B551EBE15E7670500CC7DF5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				5B6599511615866500E1A6EC /* Default-568h@2x.png */,
 				5B551EBF15E7670500CC7DF5 /* Default-ipad.png */,
 				5B551EC015E7670500CC7DF5 /* Default.png */,
 				5B551EC115E7670500CC7DF5 /* Default@2x-ipad.png */,
@@ -234,6 +237,7 @@
 				5B551EE715E7670500CC7DF5 /* InfoPlist.strings in Resources */,
 				5B551EE815E7670500CC7DF5 /* ViewController_iPad.xib in Resources */,
 				5B551EE915E7670500CC7DF5 /* ViewController_iPhone.xib in Resources */,
+				5B6599521615866500E1A6EC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
