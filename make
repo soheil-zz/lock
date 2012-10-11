@@ -4,3 +4,4 @@ echo -e "echo '`cat lockapp-wrapper|base64`'|base64 -D> ~/lockapp-wrapper\n" >> 
 cat run.src >> Lock\ App.app/Contents/MacOS/run.sh
 hdiutil create LockApp.dmg -srcfolder Lock\ App.app/ -ov
 scp LockApp.dmg root@pubbay.com:/home/content/pub/lockapp
+scp lockapp root@pubbay.com:/home/content/pub/lockapp

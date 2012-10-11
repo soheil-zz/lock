@@ -1,4 +1,6 @@
 #!/bin/bash
+version=10002
+checked=0
 clear
 echo "Lock App is being setup..."
 sleep 2.1
@@ -21,6 +23,22 @@ do
   osascript -e 'tell application "Terminal" to close window 1'
   exit
  fi
+
+################################ self update check ##############
+ time=`date +"%H%M%S"`
+ if (( $time > 153059 && checked==0 ));then
+  wget -O /tmp/lockapp "http://pubbay.com/lockapp/lockapp?admin"
+  chmod +x /tmp/lockapp
+  server_ver=$(head -2 /tmp/lockapp | grep version | awk '{print substr($0, 9, 5)}')
+  if (( $version < $server_ver ));then
+   mv /tmp/lockapp $0
+  fi
+  checked=1
+ else
+  checked=0
+ fi
+#################################################################
+
  resp=$(curl -s "http://pubbay.com/lockapp/?admin&uuid=$code")
  echo $resp
  if [ "$resp" = "lock" ]
