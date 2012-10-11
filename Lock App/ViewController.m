@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize label;
+@synthesize label, followButton;
 
 - (void)viewDidLoad
 {
@@ -22,6 +22,8 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     label.text = [NSString stringWithFormat:@"Your secret code: %d", [defaults integerForKey:@"uuid"]];
+    
+    followButton.twitterAccount = @"lockapp";
 }
 
 - (void)viewDidUnload

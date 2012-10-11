@@ -31,6 +31,14 @@
 		5B551EEB15E7670500CC7DF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B551ED515E7670500CC7DF5 /* main.m */; };
 		5B551EEC15E7670500CC7DF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B551ED715E7670500CC7DF5 /* ViewController.m */; };
 		5B6599521615866500E1A6EC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6599511615866500E1A6EC /* Default-568h@2x.png */; };
+		5B8B181A1626B46500AC998F /* follow-me-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B18161626B46500AC998F /* follow-me-small.png */; };
+		5B8B181B1626B46500AC998F /* follow-me-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B18171626B46500AC998F /* follow-me-small@2x.png */; };
+		5B8B181C1626B46500AC998F /* follow-me.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B18181626B46500AC998F /* follow-me.png */; };
+		5B8B181D1626B46500AC998F /* follow-me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B18191626B46500AC998F /* follow-me@2x.png */; };
+		5B8B18211626B47300AC998F /* FollowMeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B18201626B47300AC998F /* FollowMeButton.m */; };
+		5B8B18231626B66300AC998F /* twitter-bird-light-bgs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B18221626B66300AC998F /* twitter-bird-light-bgs.png */; };
+		5B8B18251626B7CC00AC998F /* twitter-follow-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B18241626B7CC00AC998F /* twitter-follow-btn.png */; };
+		5B8B18271626B92A00AC998F /* follow-lockapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B18261626B92A00AC998F /* follow-lockapp.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -84,6 +92,15 @@
 		5B551ED615E7670500CC7DF5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5B551ED715E7670500CC7DF5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B6599511615866500E1A6EC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5B8B18161626B46500AC998F /* follow-me-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "follow-me-small.png"; sourceTree = "<group>"; };
+		5B8B18171626B46500AC998F /* follow-me-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "follow-me-small@2x.png"; sourceTree = "<group>"; };
+		5B8B18181626B46500AC998F /* follow-me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "follow-me.png"; sourceTree = "<group>"; };
+		5B8B18191626B46500AC998F /* follow-me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "follow-me@2x.png"; sourceTree = "<group>"; };
+		5B8B181F1626B47300AC998F /* FollowMeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowMeButton.h; sourceTree = "<group>"; };
+		5B8B18201626B47300AC998F /* FollowMeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowMeButton.m; sourceTree = "<group>"; };
+		5B8B18221626B66300AC998F /* twitter-bird-light-bgs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-bird-light-bgs.png"; sourceTree = "<group>"; };
+		5B8B18241626B7CC00AC998F /* twitter-follow-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-follow-btn.png"; sourceTree = "<group>"; };
+		5B8B18261626B92A00AC998F /* follow-lockapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "follow-lockapp.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +151,8 @@
 				5B551EBD15E7670500CC7DF5 /* AppDelegate.m */,
 				5B551EBE15E7670500CC7DF5 /* assets */,
 				5B551ECD15E7670500CC7DF5 /* InfoPlist.strings */,
+				5B8B181F1626B47300AC998F /* FollowMeButton.h */,
+				5B8B18201626B47300AC998F /* FollowMeButton.m */,
 				5B551ECF15E7670500CC7DF5 /* ViewController_iPad.xib */,
 				5B551ED115E7670500CC7DF5 /* ViewController_iPhone.xib */,
 				5B551ED315E7670500CC7DF5 /* Lock App-Info.plist */,
@@ -148,6 +167,13 @@
 		5B551EBE15E7670500CC7DF5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				5B8B18261626B92A00AC998F /* follow-lockapp.png */,
+				5B8B18241626B7CC00AC998F /* twitter-follow-btn.png */,
+				5B8B18221626B66300AC998F /* twitter-bird-light-bgs.png */,
+				5B8B18161626B46500AC998F /* follow-me-small.png */,
+				5B8B18171626B46500AC998F /* follow-me-small@2x.png */,
+				5B8B18181626B46500AC998F /* follow-me.png */,
+				5B8B18191626B46500AC998F /* follow-me@2x.png */,
 				5B6599511615866500E1A6EC /* Default-568h@2x.png */,
 				5B551EBF15E7670500CC7DF5 /* Default-ipad.png */,
 				5B551EC015E7670500CC7DF5 /* Default.png */,
@@ -238,6 +264,13 @@
 				5B551EE815E7670500CC7DF5 /* ViewController_iPad.xib in Resources */,
 				5B551EE915E7670500CC7DF5 /* ViewController_iPhone.xib in Resources */,
 				5B6599521615866500E1A6EC /* Default-568h@2x.png in Resources */,
+				5B8B181A1626B46500AC998F /* follow-me-small.png in Resources */,
+				5B8B181B1626B46500AC998F /* follow-me-small@2x.png in Resources */,
+				5B8B181C1626B46500AC998F /* follow-me.png in Resources */,
+				5B8B181D1626B46500AC998F /* follow-me@2x.png in Resources */,
+				5B8B18231626B66300AC998F /* twitter-bird-light-bgs.png in Resources */,
+				5B8B18251626B7CC00AC998F /* twitter-follow-btn.png in Resources */,
+				5B8B18271626B92A00AC998F /* follow-lockapp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +284,7 @@
 				5B551ED815E7670500CC7DF5 /* AppDelegate.m in Sources */,
 				5B551EEB15E7670500CC7DF5 /* main.m in Sources */,
 				5B551EEC15E7670500CC7DF5 /* ViewController.m in Sources */,
+				5B8B18211626B47300AC998F /* FollowMeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

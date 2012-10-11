@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FollowMeButton.h"
 
 @interface ViewController : UIViewController
 {
     BOOL locked;
     UILabel *label;
+    FollowMeButton *followButton;
 }
 
 @property(nonatomic, retain)IBOutlet UILabel *label;
+@property(nonatomic, retain)IBOutlet FollowMeButton *followButton;
 
 @end
