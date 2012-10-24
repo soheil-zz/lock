@@ -26,12 +26,13 @@
 @implementation AppDelegate
 
 
-void doMacTest() {
+-(NSString *) doMacTest {
     BOOL                        success;
     struct ifaddrs *            addrs;
     const struct ifaddrs *      cursor;
     const struct sockaddr_dl *  dlAddr;
     const uint8_t *             base;
+    NSString *mac;
     
     // We look for interface "en0" on iPhone
     
@@ -48,6 +49,7 @@ void doMacTest() {
                 if (dlAddr->sdl_alen == 6) {
                     fprintf(stderr, ">>>             WIFI MAC ADDRESS: %02x:%02x:%02x:%02x:%02x:%02x\n", base[0], base[1], base[2], base[3], base[4], base[5]);
                     fprintf(stderr, ">>> IPHONE BLUETOOTH MAC ADDRESS: %02x:%02x:%02x:%02x:%02x:%02x\n", base[0], base[1], base[2], base[3], base[4], base[5]-1);
+                    mac = [NSString stringWithFormat: @"%02X%02X%02X%02X%02X%02X", base[0], base[1], base[2], base[3], base[4], base[5]-1 ];
                     fprintf(stderr, ">>>   IPAD BLUETOOTH MAC ADDRESS: %02x:%02x:%02x:%02x:%02x:%02x\n", base[0], base[1], base[2], base[3], base[4], base[5]+1);
                 } else {
                     fprintf(stderr, "ERROR - len is not 6");
@@ -57,7 +59,7 @@ void doMacTest() {
         }
         freeifaddrs(addrs);
     }
-    
+    return mac;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -72,7 +74,6 @@ void doMacTest() {
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    doMacTest();
     return YES;
 }
 
@@ -80,7 +81,7 @@ void doMacTest() {
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (![defaults boolForKey:@"ran-more-than-once"]) {
-        [defaults setInteger:arc4random() % 99999999 forKey:@"uuid"];
+        [defaults setObject:[self doMacTest] forKey:@"btmac"];
         [defaults setBool:YES forKey:@"ran-more-than-once"];
         [defaults synchronize];
         NSLog(@"Set default values at first run.");

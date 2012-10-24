@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize label, followButton;
+@synthesize label, followButton, labelHelp;
 
 - (void)viewDidLoad
 {
@@ -21,9 +21,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    label.text = [NSString stringWithFormat:@"Your secret code: %d", [defaults integerForKey:@"uuid"]];
-    
+    label.text = [NSString stringWithFormat:@"Your secret code: %@", [defaults objectForKey:@"btmac"]];
+
     followButton.twitterAccount = @"lockapp";
+    labelHelp.hidden = ![defaults boolForKey:@"view-loaded-more-than-once"];
+    if (labelHelp.hidden) {
+        [defaults setBool:YES forKey:@"view-loaded-more-than-once"];
+        [defaults synchronize];
+    }
 }
 
 - (void)viewDidUnload
@@ -35,19 +40,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return NO;
-}
-
-- (IBAction)lock:(id)sender
-{
-    [(UIButton *)sender setImage:[UIImage imageNamed:locked ? @"unlocked.png" : @"locked.png"] forState:UIControlStateNormal];
-
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSURLRequest *request = [NSURLRequest requestWithURL:
-                                 [NSURL URLWithString:[NSString stringWithFormat:@"http://pubbay.com/lockapp/?admin&%@&uuid=%d", locked ? @"unlock" : @"lock", [defaults integerForKey:@"uuid"]]]];
-    NSURLConnection *dummy = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    dummy = dummy;
-
-    locked = !locked;
 }
 
 @end

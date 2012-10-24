@@ -14,9 +14,11 @@
     BOOL locked;
     UILabel *label;
     FollowMeButton *followButton;
+    UILabel *labelHelp;
 }
 
 @property(nonatomic, retain)IBOutlet UILabel *label;
+@property(nonatomic, retain)IBOutlet UILabel *labelHelp;
 @property(nonatomic, retain)IBOutlet FollowMeButton *followButton;
 
 @end
