@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5B065B8615D226AF001E1D34"
-               BuildableName = "Lock App.app"
-               BlueprintName = "Lock App"
-               ReferencedContainer = "container:Lock App.xcodeproj">
+               BuildableName = "Lock App BT.app"
+               BlueprintName = "Lock App BT"
+               ReferencedContainer = "container:Lock App BT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B065B8615D226AF001E1D34"
-            BuildableName = "Lock App.app"
-            BlueprintName = "Lock App"
-            ReferencedContainer = "container:Lock App.xcodeproj">
+            BuildableName = "Lock App BT.app"
+            BlueprintName = "Lock App BT"
+            ReferencedContainer = "container:Lock App BT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -47,15 +47,14 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      enableOpenGLFrameCaptureMode = "0"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B065B8615D226AF001E1D34"
-            BuildableName = "Lock App.app"
-            BlueprintName = "Lock App"
-            ReferencedContainer = "container:Lock App.xcodeproj">
+            BuildableName = "Lock App BT.app"
+            BlueprintName = "Lock App BT"
+            ReferencedContainer = "container:Lock App BT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5B065B8615D226AF001E1D34"
-            BuildableName = "Lock App.app"
-            BlueprintName = "Lock App"
-            ReferencedContainer = "container:Lock App.xcodeproj">
+            BuildableName = "Lock App BT.app"
+            BlueprintName = "Lock App BT"
+            ReferencedContainer = "container:Lock App BT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

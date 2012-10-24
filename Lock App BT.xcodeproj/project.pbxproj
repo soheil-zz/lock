@@ -63,7 +63,7 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
-		5B065B8715D226AF001E1D34 /* Lock App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B065B8715D226AF001E1D34 /* Lock App BT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock App BT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B065B8B15D226AF001E1D34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B065B8D15D226AF001E1D34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5B065B8F15D226AF001E1D34 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,8 +86,8 @@
 		5B551ECE15E7670500CC7DF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5B551ED015E7670500CC7DF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		5B551ED215E7670500CC7DF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		5B551ED315E7670500CC7DF5 /* Lock App-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Lock App-Info.plist"; sourceTree = "<group>"; };
-		5B551ED415E7670500CC7DF5 /* Lock App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lock App-Prefix.pch"; sourceTree = "<group>"; };
+		5B551ED315E7670500CC7DF5 /* Lock App BT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Lock App BT-Info.plist"; sourceTree = "<group>"; };
+		5B551ED415E7670500CC7DF5 /* Lock App BT-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lock App BT-Prefix.pch"; sourceTree = "<group>"; };
 		5B551ED515E7670500CC7DF5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B551ED615E7670500CC7DF5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5B551ED715E7670500CC7DF5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		5B065B8815D226AF001E1D34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B065B8715D226AF001E1D34 /* Lock App.app */,
+				5B065B8715D226AF001E1D34 /* Lock App BT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,8 +155,8 @@
 				5B8B18201626B47300AC998F /* FollowMeButton.m */,
 				5B551ECF15E7670500CC7DF5 /* ViewController_iPad.xib */,
 				5B551ED115E7670500CC7DF5 /* ViewController_iPhone.xib */,
-				5B551ED315E7670500CC7DF5 /* Lock App-Info.plist */,
-				5B551ED415E7670500CC7DF5 /* Lock App-Prefix.pch */,
+				5B551ED315E7670500CC7DF5 /* Lock App BT-Info.plist */,
+				5B551ED415E7670500CC7DF5 /* Lock App BT-Prefix.pch */,
 				5B551ED515E7670500CC7DF5 /* main.m */,
 				5B551ED615E7670500CC7DF5 /* ViewController.h */,
 				5B551ED715E7670500CC7DF5 /* ViewController.m */,
@@ -196,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B065B8615D226AF001E1D34 /* Lock App */ = {
+		5B065B8615D226AF001E1D34 /* Lock App BT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B065BA815D226AF001E1D34 /* Build configuration list for PBXNativeTarget "Lock App" */;
+			buildConfigurationList = 5B065BA815D226AF001E1D34 /* Build configuration list for PBXNativeTarget "Lock App BT" */;
 			buildPhases = (
 				5B065B8315D226AF001E1D34 /* Sources */,
 				5B065B8415D226AF001E1D34 /* Frameworks */,
@@ -210,9 +210,9 @@
 			);
 			dependencies = (
 			);
-			name = "Lock App";
+			name = "Lock App BT";
 			productName = "Lock Up";
-			productReference = 5B065B8715D226AF001E1D34 /* Lock App.app */;
+			productReference = 5B065B8715D226AF001E1D34 /* Lock App BT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Soheil Yasrebi";
 			};
-			buildConfigurationList = 5B065B8115D226AF001E1D34 /* Build configuration list for PBXProject "Lock App" */;
+			buildConfigurationList = 5B065B8115D226AF001E1D34 /* Build configuration list for PBXProject "Lock App BT" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,7 +236,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B065B8615D226AF001E1D34 /* Lock App */,
+				5B065B8615D226AF001E1D34 /* Lock App BT */,
 			);
 		};
 /* End PBXProject section */
@@ -374,9 +374,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lock App/Lock App-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Lock App/Lock App-Info.plist";
-				PRODUCT_NAME = "Lock App";
+				GCC_PREFIX_HEADER = "Lock App/Lock App BT-Prefix.pch";
+				INFOPLIST_FILE = "Lock App/Lock App BT-Info.plist";
+				PRODUCT_NAME = "Lock App BT";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,9 +386,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lock App/Lock App-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Lock App/Lock App-Info.plist";
-				PRODUCT_NAME = "Lock App";
+				GCC_PREFIX_HEADER = "Lock App/Lock App BT-Prefix.pch";
+				INFOPLIST_FILE = "Lock App/Lock App BT-Info.plist";
+				PRODUCT_NAME = "Lock App BT";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,7 +397,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B065B8115D226AF001E1D34 /* Build configuration list for PBXProject "Lock App" */ = {
+		5B065B8115D226AF001E1D34 /* Build configuration list for PBXProject "Lock App BT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B065BA615D226AF001E1D34 /* Debug */,
@@ -406,7 +406,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B065BA815D226AF001E1D34 /* Build configuration list for PBXNativeTarget "Lock App" */ = {
+		5B065BA815D226AF001E1D34 /* Build configuration list for PBXNativeTarget "Lock App BT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B065BA915D226AF001E1D34 /* Debug */,
