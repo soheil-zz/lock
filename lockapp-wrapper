@@ -1,2 +1,0 @@
-#!/bin/bash
-su - $1 -c "nohup ~/lockapp &"

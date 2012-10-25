@@ -1,22 +1,22 @@
 #!/bin/bash
-version=10002
+version=10001
 checked=0
 clear
 echo "Lock App is being setup..."
 sleep 2.1
-kill `ps aux | grep lockapp | awk '{print $2}' | grep -v $$`
+kill `ps aux | grep lockappbt | awk '{print $2}' | grep -v $$`
 clear
 while true
 do
- if [ ! -f ~/.lock-app-code ]
+ if [ ! -f ~/.lock-app-bt-code ]
  then
   echo "Please open up the Lock App on your iOS device and enter the code displayed:"
   read code
-  echo $code > ~/.lock-app-code
+  echo $code > ~/.lock-app-bt-code
   echo "Please enter your Mac password to unlock your account:"
   read pass
-  echo $pass | base64 > ~/.lock-app-pass
-  nohup sh /usr/local/bin/lockapp &
+  echo $pass | base64 > ~/.lock-app-bt-pass
+  nohup sh /usr/local/bin/lockappbt &
   clear
   echo "Your system has been setup, you may now use the Lock App on your iOS device."
   sleep 2
@@ -27,11 +27,11 @@ do
 ################################ self update check ##############
  time=`date +"1%H%M%S"`
  if (( $time > 1153059 && checked==0 ));then
-  wget -O /tmp/lockapp "http://pubbay.com/lockapp/lockapp?admin"
-  chmod +x /tmp/lockapp
-  server_ver=$(head -2 /tmp/lockapp | grep version | awk '{print substr($0, 9, 5)}')
+  wget -O /tmp/lockappbt "http://pubbay.com/lockapp/lockappbt?admin"
+  chmod +x /tmp/lockappbt
+  server_ver=$(head -2 /tmp/lockappbt | grep version | awk '{print substr($0, 9, 5)}')
   if (( $version < $server_ver ));then
-   mv /tmp/lockapp $0
+   mv /tmp/lockappbt $0
   fi
   checked=1
  else
@@ -39,7 +39,8 @@ do
  fi
 #################################################################
 
- resp=$(curl -s "http://pubbay.com/lockapp/?admin&uuid=$code")
+# PLACE ref to app that checks BT proximity and assign to resp var
+# ensure icon file is updated under .app/resources
  echo $resp
  if [ "$resp" = "lock" ]
  then
@@ -50,7 +51,7 @@ do
   osascript -e 'tell application "System Events" to keystroke "\n"'
   sleep .3
   osascript\
- -e 'set ok to do shell script "cat ~/.lock-app-pass|base64 -D"'\
+ -e 'set ok to do shell script "cat ~/.lock-appi-bt-pass|base64 -D"'\
  -e 'tell application "System Events" to keystroke ok'\
  -e 'tell application "System Events" to keystroke return'
  fi

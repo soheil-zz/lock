@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
   <key>CFBundleGetInfoString</key>
-  <string>Lock App</string>
+  <string>Lock App BT</string>
   <key>CFBundleExecutable</key>
   <string>run.sh</string>
   <key>CFBundleIdentifier</key>
   <string>com.jog-a-lot.www</string>
   <key>CFBundleName</key>
-  <string>Lock App</string>
+  <string>Lock App BT</string>
   <key>CFBundleIconFile</key>
-  <string>Lock App.icns</string>
+  <string>Lock App BT.icns</string>
   <key>CFBundleShortVersionString</key>
   <string>0.01</string>
   <key>CFBundleInfoDictionaryVersion</key>
