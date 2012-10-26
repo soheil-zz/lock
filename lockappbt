@@ -61,12 +61,13 @@ do
   continue
  fi
 
+ locked=$(ps aux | grep ScreenSaverEngine | grep -v grep)
  echo "doing action"
- if [ "$resp" = "lock" ]
+ if [ "$resp" = "lock" ] && [ "$locked" == "" ]
  then
   open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app
  fi
- if [ "$resp" = "unlock" ]
+ if [ "$resp" = "unlock" ] && [ "$locked" != "" ]
  then
   osascript -e 'tell application "System Events" to keystroke "\n"'
   sleep 1
