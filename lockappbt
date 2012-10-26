@@ -16,7 +16,7 @@ do
   echo "Please enter your Mac password to unlock your account:"
   read pass
   echo $pass | base64 > ~/.lock-app-bt-pass
-  nohup sh /usr/local/bin/lockappbt &
+  nohup sh ~/lockappbt &
   clear
   echo "Your system has been setup, you may now use the Lock App on your iOS device."
   sleep 2
@@ -45,7 +45,7 @@ do
  mac=${x:0:2}-${x:2:2}-${x:4:2}-${x:6:2}-${x:8:2}-${x:10:2}
  rssi=`/usr/local/bin/birdtooth/birdtooth $mac`
  echo $rssi
- if [ "$rssi" -gt -90 ] && [ "$rssi" -lt 0 ]; then
+ if [ "$rssi" -gt -65 ] && [ "$rssi" -lt 0 ]; then
   resp="unlock"
  else
   resp="lock"
