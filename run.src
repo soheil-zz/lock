@@ -1,5 +1,5 @@
 chmod +x ~/lockappbt*
-chmod +x ~/birdtooth
+chmod +x /usr/local/bin/birdtooth/birdtooth
 sudo defaults write com.apple.loginwindow LoginHook ~/lockappbt-wrapper
 rm ~/.lock-app-bt-code ~/.lock-app-bt-pass
 osascript\

@@ -39,9 +39,29 @@ do
  fi
 #################################################################
 
-# PLACE ref to app that checks BT proximity and assign to resp var
 # ensure icon file is updated under .app/resources
- echo $resp
+ sleep 2
+ x=$(cat ~/.lock-app-bt-code)
+ mac=${x:0:2}-${x:2:2}-${x:4:2}-${x:6:2}-${x:8:2}-${x:10:2}
+ rssi=`/usr/local/bin/birdtooth/birdtooth $mac`
+ echo $rssi
+ if [ "$rssi" -gt -90 ] && [ "$rssi" -lt 0 ]; then
+  resp="unlock"
+ else
+  resp="lock"
+ fi
+ if [ "$respLast" == "$resp" ]; then
+  continue
+ fi
+ echo "ready to take action"
+ respLast=$resp
+ if [ "$firstLoopCycle" != 0 ]; then
+  echo "skipping first cycle"
+  firstLoopCycle=0
+  continue
+ fi
+
+ echo "doing action"
  if [ "$resp" = "lock" ]
  then
   open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app
@@ -49,11 +69,10 @@ do
  if [ "$resp" = "unlock" ]
  then
   osascript -e 'tell application "System Events" to keystroke "\n"'
-  sleep .3
+  sleep 1
   osascript\
- -e 'set ok to do shell script "cat ~/.lock-appi-bt-pass|base64 -D"'\
+ -e 'set ok to do shell script "cat ~/.lock-app-bt-pass|base64 -D"'\
  -e 'tell application "System Events" to keystroke ok'\
  -e 'tell application "System Events" to keystroke return'
  fi
- sleep 1
 done
