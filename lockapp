@@ -16,7 +16,7 @@ do
   echo "Please enter your Mac password to unlock your account:"
   read pass
   echo $pass | base64 > ~/.lock-app-pass
-  nohup sh /usr/local/bin/lockapp &
+  nohup sh ~/lockapp &
   clear
   echo "Your system has been setup, you may now use the Lock App on your iOS device."
   sleep 2
