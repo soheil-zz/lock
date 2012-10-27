@@ -1,5 +1,5 @@
 #!/bin/bash
-version=10002
+version=10003
 checked=0
 clear
 echo "Lock App is being setup..."
@@ -26,16 +26,15 @@ do
 
 ################################ self update check ##############
  time=`date +"1%H%M%S"`
- if (( $time > 1153059 && checked==0 ));then
-  wget -O /tmp/lockapp "http://pubbay.com/lockapp/lockapp?admin"
+ day=`date +"%d"`
+ if (( $time > 1153059 && $checked != $day ));then
+  curl -o /tmp/lockapp "http://pubbay.com/lockapp/lockapp?admin"
   chmod +x /tmp/lockapp
   server_ver=$(head -2 /tmp/lockapp | grep version | awk '{print substr($0, 9, 5)}')
   if (( $version < $server_ver ));then
    mv /tmp/lockapp $0
   fi
-  checked=1
- else
-  checked=0
+  checked=$day
  fi
 #################################################################
 
