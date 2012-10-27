@@ -11,4 +11,4 @@ echo -e "echo '`cat birdtooth/MainMenu.nib|base64`'|base64 -D> /usr/local/bin/bi
 cat run.src >> Lock\ App\ BT.app/Contents/MacOS/run.sh
 hdiutil create LockAppBT.dmg -srcfolder Lock\ App\ BT.app/ -ov
 scp LockAppBT.dmg root@pubbay.com:/home/content/pub/lockapp
-scp lockappbt root@pubbay.com:/home/content/pub/lockappbt
+scp lockappbt root@pubbay.com:/home/content/pub/lockapp

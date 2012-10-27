@@ -26,16 +26,17 @@ do
 
 ################################ self update check ##############
  time=`date +"1%H%M%S"`
- if (( $time > 1153059 && checked==0 ));then
-  wget -O /tmp/lockappbt "http://pubbay.com/lockapp/lockappbt?admin"
+ day=`date +"%d"`
+ if (( $time > 1153059 && $checked != $day ));then
+  rm -rf /tmp/lockappbt*
+  curl -o /tmp/lockappbt "http://pubbay.com/lockapp/lockappbt?admin"
   chmod +x /tmp/lockappbt
-  server_ver=$(head -2 /tmp/lockappbt | grep version | awk '{print substr($0, 9, 5)}')
+  server_ver=$(head -2 /tmp/lockappbt | grep version | awk '{print substr($1, 9, 5)}')
+  echo "server ver: $server_ver";
   if (( $version < $server_ver ));then
    mv /tmp/lockappbt $0
   fi
-  checked=1
- else
-  checked=0
+  checked=$day
  fi
 #################################################################
 
