@@ -44,7 +44,7 @@ do
  sleep 2
  x=$(cat ~/.lock-app-bt-code)
  mac=${x:0:2}-${x:2:2}-${x:4:2}-${x:6:2}-${x:8:2}-${x:10:2}
- rssi=`/usr/local/bin/birdtooth/birdtooth $mac`
+ rssi=`~/.birdtooth/birdtooth $mac`
  echo $rssi
  if [ "$rssi" -gt -75 ] && [ "$rssi" -lt 0 ]; then
   resp="unlock"
