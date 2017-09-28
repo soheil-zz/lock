@@ -1,1 +1,1 @@
-alert(9)
+document.location = 'https://google.com'
