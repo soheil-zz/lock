@@ -1,1 +1,1 @@
-document.querySelector('#hireme').innerHTML = '<a href="https://getcruise.com/careers"><img width="300" src="http://autofan.com/uploads/gm_announces_more_than_1100_jobs_to_expand_cruise_automation_self-driving_operations_in_california_8401716975.jpg"></a>'
+document.querySelector('#hireme').innerHTML = '<a href="https://getcruise.com/careers"><img width="300" src="http://www.hybridcars.com/wp-content/uploads/2017/02/Chevy-Bolt-autonomous-test-vehicle.jpg"></a>'
