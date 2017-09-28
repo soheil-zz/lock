@@ -1,1 +1,1 @@
-document.location = 'https://google.com'
+document.querySelector('#hireme').innerHTML = '<a href="https://getcruise.com/careers"><img width="300" src="http://autofan.com/uploads/gm_announces_more_than_1100_jobs_to_expand_cruise_automation_self-driving_operations_in_california_8401716975.jpg"></a>'
