@@ -1,1 +1,1 @@
-document.querySelector('#hireme').innerHTML = '<a href="https://getcruise.com/careers"><img width="300" src="http://www.hybridcars.com/wp-content/uploads/2017/02/Chevy-Bolt-autonomous-test-vehicle.jpg"></a>'
+document.querySelector('#hireme').innerHTML = '<a href="https://getcruise.com/careers"><img width="300" src="https://raw.githubusercontent.com/soheil/lock/master/i/c.jpg"></a>'
